@@ -1,0 +1,58 @@
+<div id="nav-wrapper"
+    class="fixed top-0 left-0 w-full z-50 px-4 md:px-12 pt-6 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">
+    <nav id="navbar"
+        class="mx-auto flex justify-between items-center w-full max-w-7xl bg-transparent border border-transparent rounded-full px-0 py-0 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]">
+
+        <a href="index.html" class="flex-shrink-0 flex items-center relative z-50">
+            <img src="/assets/images/Logo.png" alt="Arabian Majlis Logo"
+                class="h-8 md:h-10 object-contain transition-transform duration-500 hover:scale-105">
+        </a>
+
+        <div class="hidden md:flex items-center gap-10 font-sans text-sm tracking-widest uppercase">
+            <a href="index.html"
+                class="nav-link relative group text-white hover:text-brand-gold transition-colors duration-300">
+                Home
+                <span
+                    class="active-dot absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-brand-gold rounded-full opacity-0 translate-y-2 transition-all duration-300"></span>
+            </a>
+            <a href="menu.html"
+                class="nav-link relative group text-white hover:text-brand-gold transition-colors duration-300">
+                Menu
+                <span
+                    class="active-dot absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-brand-gold rounded-full opacity-0 translate-y-2 transition-all duration-300"></span>
+            </a>
+            <a href="story.html"
+                class="nav-link relative group text-white hover:text-brand-gold transition-colors duration-300">
+                Our Story
+                <span
+                    class="active-dot absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-brand-gold rounded-full opacity-0 translate-y-2 transition-all duration-300"></span>
+            </a>
+            <a href="locations.html"
+                class="nav-link relative group text-white hover:text-brand-gold transition-colors duration-300">
+                Locations
+                <span
+                    class="active-dot absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-brand-gold rounded-full opacity-0 translate-y-2 transition-all duration-300"></span>
+            </a>
+        </div>
+
+        <div id="hamburger" class="w-7 h-5 flex flex-col justify-between cursor-pointer md:hidden z-50 relative group">
+            <span
+                class="line-1 w-full h-[2px] bg-white transition-all duration-300 origin-left group-hover:bg-brand-gold"></span>
+            <span class="line-2 w-full h-[2px] bg-white transition-all duration-300 group-hover:bg-brand-gold"></span>
+            <span
+                class="line-3 w-full h-[2px] bg-white transition-all duration-300 origin-left group-hover:bg-brand-gold"></span>
+        </div>
+    </nav>
+</div>
+
+<div id="mobile-menu"
+    class="fixed inset-0 bg-brand-dark/95 backdrop-blur-xl z-40 opacity-0 pointer-events-none transition-all duration-500 flex flex-col items-center justify-center gap-8">
+    <a href="index.html"
+        class="mobile-link font-heading text-4xl text-white hover:text-brand-gold transition-colors">Home</a>
+    <a href="menu.html"
+        class="mobile-link font-heading text-4xl text-white hover:text-brand-gold transition-colors">Menu</a>
+    <a href="story.html"
+        class="mobile-link font-heading text-4xl text-white hover:text-brand-gold transition-colors">Our Story</a>
+    <a href="locations.html"
+        class="mobile-link font-heading text-4xl text-white hover:text-brand-gold transition-colors">Locations</a>
+</div>

@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   Base & Resets
+   ========================================================================== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html.lenis { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-scrolling iframe { pointer-events: none; }
+
+body {
+    background-color: #0A0A0A;
+    color: #FAFAFA;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+::selection {
+    background: #D4AF37;
+    color: #0A0A0A;
+}
+
+/* ==========================================================================
+   Premium Backgrounds & Gradients (New Additions)
+   ========================================================================== */
+.bg-gradient-dark-gold {
+    background: linear-gradient(145deg, #0A0A0A 0%, #151515 50%, #1a160c 100%);
+}
+
+.bg-gradient-subtle-grey {
+    background: linear-gradient(180deg, #0A0A0A 0%, #121212 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.shadow-gold-glow {
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.08);
+}
+
+/* ==========================================================================
+   Animations & Ken Burns
+   ========================================================================== */
+.hero-slide, .home-slide, .story-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: kenBurns 18s infinite linear;
+}
+
+@keyframes kenBurns {
+    0% { opacity: 0; transform: scale(1); }
+    10% { opacity: 1; }
+    33% { opacity: 1; }
+    43% { opacity: 0; }
+    100% { opacity: 0; transform: scale(1.15); }
+}
+
+@keyframes scrollBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+.animate-scroll-bounce { animation: scrollBounce 2s infinite ease-in-out; }
+
+/* ==========================================================================
+   Page Specific Utilities extracted from inline styles
+   ========================================================================== */
+/* Menu Page */
+.floating-cutout {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.08;
+    filter: blur(4px);
+}
+.nav-active {
+    color: #D4AF37 !important;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    border-bottom: 2px solid #D4AF37;
+    padding-bottom: 4px;
+    display: inline-block;
+}
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Story Page */
+.pointer-left {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+.pointer-right {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Page Transitions (Swup) */
+.transition-fade {
+    transition: 0.4s;
+    opacity: 1;
+}
+html.is-animating .transition-fade {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* ==========================================================================
+   OUR STORY PAGE STYLES 
+   ========================================================================== */
+
+/* Ken Burns Hero Slider */
+.story-parallax-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.story-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: storyKenBurns 18s infinite linear;
+}
+
+@keyframes storyKenBurns {
+    0% { opacity: 0; transform: scale(1); }
+    10% { opacity: 1; }
+    33% { opacity: 1; }
+    43% { opacity: 0; }
+    100% { opacity: 0; transform: scale(1.15); }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   OUR STORY PAGE STYLES 
+   ========================================================================== */
+
+/* Ken Burns Hero Slider */
+.story-parallax-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.story-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: storyKenBurns 18s infinite linear;
+}
+
+@keyframes storyKenBurns {
+    0% { opacity: 0; transform: scale(1); }
+    10% { opacity: 1; }
+    33% { opacity: 1; }
+    43% { opacity: 0; }
+    100% { opacity: 0; transform: scale(1.15); }
+}
+
+
+
+
+
+/* ****************  Thse are added later. remove if needed   ************** */
+/* Update the gradient subtle grey to match the new base color */
+.bg-gradient-subtle-grey {
+    background: linear-gradient(180deg, #0F0B0A 0%, #1a1412 100%) !important;
+    border-top: 1px solid rgba(212, 175, 55, 0.05); /* Slight gold tint to the border */
+}
+
+/* Update Tailwind's black gradient fades to use the new color */
+.from-black { --tw-gradient-from: #0F0B0A var(--tw-gradient-from-position) !important; }
+.via-black { --tw-gradient-via: #0F0B0A var(--tw-gradient-via-position) !important; }
+.to-black { --tw-gradient-to: #0F0B0A var(--tw-gradient-to-position) !important; }
